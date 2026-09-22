@@ -5,7 +5,7 @@
 <h1 align="center">Naro</h1>
 <p align="center"><strong>Your files. Google’s editors. One double-click.</strong></p>
 <p align="center">A native macOS app for opening Office files in Google Docs, Sheets, and Slides<br>and bringing saved changes back to your Mac.</p>
-<p align="center"><a href="DEPLOY.md">Deploy to Netlify</a> · <a href="docs/privacy.html">Privacy</a> · <a href="https://github.com/plexideas/naro-site/issues">Support</a></p>
+<p align="center"><a href="DEPLOY.md">Deploy to Netlify</a> · <a href="docs/guides.html">Guides</a> · <a href="docs/privacy.html">Privacy</a> · <a href="https://github.com/plexideas/naro-site/issues">Support</a></p>
 
 > **In development.** No public installer is available yet. The current build targets Apple Silicon and macOS 26+. This repository contains the public information website and documentation; the application source is not included.
 

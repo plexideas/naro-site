@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Guides — Naro</title>
+    <meta
+      name="description"
+      content="Step-by-step guides for opening Office files, connecting Google accounts, and saving changes with Naro."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Guides — Naro" />
+    <meta
+      property="og:description"
+      content="Step-by-step guides for opening Office files, connecting Google accounts, and saving changes with Naro."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/naro.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="wrap nav">
+      <a class="brand" href="./" aria-label="Naro home"
+        ><img src="assets/naro.png" alt="" width="38" height="38" /><span
+          >Naro</span
+        ><span class="brand-detail">for Mac</span></a
+      >
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./#how-it-works">How it works</a
+        ><a class="optional" href="./#formats">File formats</a
+        ><a href="guides.html">Guides</a><a href="privacy.html">Privacy</a>
+      </nav>
+      <a class="repo-link" href="https://github.com/plexideas/naro-site"
+        >GitHub <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main" class="wrap guides-page">
+      <header class="guides-heading">
+        <p class="kicker">The Naro field guide</p>
+        <h1>Small guides.<br /><span>A smoother start.</span></h1>
+        <p class="guide-intro">
+          A few practical steps to feel at home with Naro.
+        </p>
+        <p class="guide-version">
+          For the current development build, on macOS 26+ and Apple Silicon.
+          Public downloads are not available yet.
+        </p>
+      </header>
+      <nav class="guide-index" aria-label="Guide contents">
+        <a href="#get-started"
+          ><span>01</span>Your first file <span aria-hidden="true">↓</span></a
+        ><a href="#accounts"
+          ><span>02</span>Google accounts <span aria-hidden="true">↓</span></a
+        ><a href="#sync"
+          ><span>03</span>Saving &amp; sync <span aria-hidden="true">↓</span></a
+        >
+      </nav>
+      <article id="get-started" class="guide-article">
+        <div class="guide-aside">
+          <p class="guide-category"><span></span>Getting started</p>
+          <h2>Your first file,<br />from start to finish.</h2>
+          <p>A double-click is all you need once Naro is connected.</p>
+          <img
+            src="assets/word.png"
+            width="90"
+            height="90"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+        <div class="guide-content">
+          <ol class="guide-steps">
+            <li>
+              <h3>Open Naro and connect Google.</h3>
+              <p>
+                Start Naro from your Applications folder. Choose the Google
+                sign-in button. Your browser will open so you can select an
+                account and grant the requested access. Return to Naro when
+                sign-in finishes.
+              </p>
+            </li>
+            <li>
+              <h3>Make Naro your default.</h3>
+              <p>
+                Open the account screen using the account icon in the toolbar.
+                Find <strong>Opening from Finder</strong> and choose
+                <strong>Configure…</strong>, then confirm the system’s
+                default-application selection.
+              </p>
+              <p class="guide-tip">
+                The current app interface is in Russian: look for
+                <span lang="ru">«Открытие из Finder» → «Настроить…»</span>.
+              </p>
+            </li>
+            <li>
+              <h3>Double-click an Office document.</h3>
+              <p>
+                In Finder, open a DOC/DOCX, XLS/XLSX, or PPT/PPTX file. If you
+                have connected more than one account, choose one in the avatar
+                picker. Naro uploads the file to that account’s Google Drive and
+                opens the corresponding editor.
+              </p>
+            </li>
+            <li>
+              <h3>Edit in your browser.</h3>
+              <p>
+                Make your changes and let Google save them. Keep Naro running
+                and your Mac online so the saved changes can return to the local
+                file. Closing Naro’s window is fine; quitting the app pauses
+                synchronization.
+              </p>
+            </li>
+          </ol>
+          <div class="guide-note">
+            <strong>Keep an eye on compatibility.</strong>
+            <p>
+              Files up to 100 MB are supported. Complex Office formatting,
+              macros, and advanced features depend on what Google’s editors
+              support.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article id="accounts" class="guide-article">
+        <div class="guide-aside">
+          <p class="guide-category"><span></span>Google accounts</p>
+          <h2>The right account<br />for every file.</h2>
+          <p>Keep work and personal documents with the account you choose.</p>
+          <div class="mini-accounts" aria-hidden="true">
+            <span class="poster-avatar avatar-work">W</span
+            ><span class="poster-avatar avatar-personal">P</span>
+          </div>
+        </div>
+        <div class="guide-content">
+          <ol class="guide-steps">
+            <li>
+              <h3>Add another account.</h3>
+              <p>
+                Open Naro, go to the account screen, and use the
+                <strong>+</strong> button. Complete Google sign-in in your
+                browser with the account you want to add. Signing in to an
+                existing account updates its authorization instead of adding a
+                duplicate.
+              </p>
+            </li>
+            <li>
+              <h3>Choose an avatar when opening a file.</h3>
+              <p>
+                With one account, Naro opens the file directly. With several, a
+                small account picker appears first. Hover over an avatar to see
+                the account’s name and email, then select it.
+              </p>
+            </li>
+            <li>
+              <h3>Cancel without uploading.</h3>
+              <p>
+                Press Escape or click outside the picker to cancel. Naro does
+                not upload the file until an account has been selected.
+              </p>
+            </li>
+            <li>
+              <h3>Remove an account when you need to.</h3>
+              <p>
+                Use the remove control beside the account on the account screen.
+                Naro clears its saved sign-in on this Mac and stops syncing that
+                account. Local documents, history, backups, and Google Drive
+                files remain.
+              </p>
+            </li>
+          </ol>
+          <div class="guide-note">
+            <strong>Disconnecting is different from revoking access.</strong>
+            <p>
+              To revoke Google’s authorization as well, remove Naro from
+              <a href="https://myaccount.google.com/connections"
+                >your Google Account’s third-party connections</a
+              >. See the <a href="privacy.html">privacy policy</a> for deletion
+              details.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article id="sync" class="guide-article">
+        <div class="guide-aside">
+          <p class="guide-category"><span></span>Saving &amp; sync</p>
+          <h2>Keep your changes<br />coming home.</h2>
+          <p>Know what gets saved, and what happens when two copies change.</p>
+          <span class="guide-sync-symbol" aria-hidden="true">⇄</span>
+        </div>
+        <div class="guide-content">
+          <ol class="guide-steps">
+            <li>
+              <h3>Give Google time to save.</h3>
+              <p>
+                Naro checks linked files approximately every 15 seconds while it
+                is running and online. It can only download changes after Google
+                has saved them. This is not a guarantee that every edit reaches
+                your Mac within 15 seconds.
+              </p>
+            </li>
+            <li>
+              <h3>Leave Naro running.</h3>
+              <p>
+                You can close the Naro window and continue working. There is no
+                menu-bar icon; open the app again to see your recent files. If
+                you quit Naro, reopen it to resume synchronization.
+              </p>
+            </li>
+            <li>
+              <h3>Choose a version if both copies changed.</h3>
+              <p>
+                If the file changes locally and in Google, Naro preserves both
+                versions and asks which one to continue with. Choose the Google
+                version, the local version, or decide later. Naro also creates a
+                backup before overwriting a local document.
+              </p>
+            </li>
+            <li>
+              <h3>Keep the original file link.</h3>
+              <p>
+                If Google upgrades an older DOC, XLS, or PPT file, Naro saves a
+                modern-format copy alongside the original. Using Google’s
+                separate “Save as Google Docs/Sheets/Slides” conversion creates
+                another document that the original Naro link does not track.
+              </p>
+            </li>
+          </ol>
+          <div class="guide-note">
+            <strong>Backups stay on your Mac.</strong>
+            <p>
+              They are stored under
+              <code>~/Library/Application Support/Naro/Backups/</code> and are
+              not automatically deleted. Deleting a local document does not
+              delete its Drive copy, and deleting a Drive copy does not delete
+              your local document.
+            </p>
+          </div>
+        </div>
+      </article>
+      <div class="guide-end">
+        <div>
+          <h2>Still have a question?</h2>
+          <p>
+            Tell us what you were trying to do. Please keep private files and
+            account credentials out of public issues.
+          </p>
+        </div>
+        <a
+          class="primary-link"
+          href="https://github.com/plexideas/naro-site/issues"
+          >Ask on GitHub</a
+        >
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-main">
+          <a class="brand" href="./"
+            ><img src="assets/naro.png" alt="" width="28" height="28" />Naro</a
+          >
+          <nav aria-label="Footer navigation">
+            <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a
+            ><a href="https://github.com/plexideas/naro-site/issues"
+              >Support ↗</a
+            >
+          </nav>
+        </div>
+        <p class="fineprint">
+          An independent app by
+          <a href="https://github.com/plexideas">Sergei Sakharovskii</a>. Not
+          affiliated with Google, Microsoft, or Apple. Product names belong to
+          their respective owners.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
