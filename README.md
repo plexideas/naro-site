@@ -7,7 +7,7 @@
 <p align="center">A native macOS app for opening Office files in Google Docs, Sheets, and Slides<br>and bringing saved changes back to your Mac.</p>
 <p align="center"><a href="DEPLOY.md">Deploy to Netlify</a> · <a href="docs/guides.html">Guides</a> · <a href="docs/privacy.html">Privacy</a> · <a href="https://github.com/plexideas/naro-site/issues">Support</a></p>
 
-> **In development.** No public installer is available yet. The current build targets Apple Silicon and macOS 26+. This repository contains the public information website and documentation; the application source is not included.
+> **[Download Naro](https://github.com/plexideas/naro/releases/latest)** · **[Website](https://naro.tools/)**. The current build targets Apple Silicon and macOS 26+. This repository contains the public information website and documentation; the application source is not included.
 
 <p align="center"><img src="docs/assets/naro-window.png" width="720" alt="The actual Naro recent-documents window with sample files"></p>
 
@@ -38,7 +38,7 @@
 - Files up to 100 MB are supported. Office compatibility depends on Google’s editors.
 - Older Office files upgraded by Google are saved beside the original in the modern format.
 - Converting an Office file into a separate Google-native document is not tracked by its original link.
-- Automatic app updates are planned, not implemented. Public Google OAuth verification is not claimed.
+- In-app updates download releases from GitHub and restart with user confirmation. Public Google OAuth verification is not claimed.
 - The app interface is currently in Russian.
 
 ## Privacy and support
