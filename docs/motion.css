@@ -1,0 +1,238 @@
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hero-copy > *,
+  .guides-heading > * {
+    animation: naro-enter 750ms var(--motion-ease) both;
+  }
+  .hero-copy > :nth-child(2),
+  .guides-heading > :nth-child(2) {
+    animation-delay: 80ms;
+  }
+  .hero-copy > :nth-child(3),
+  .guides-heading > :nth-child(3) {
+    animation-delay: 160ms;
+  }
+  .hero-copy > :nth-child(4),
+  .guides-heading > :nth-child(4) {
+    animation-delay: 240ms;
+  }
+  .hero-copy > :nth-child(5) {
+    animation-delay: 320ms;
+  }
+  .local-document {
+    animation: naro-enter 900ms 140ms var(--motion-ease) both;
+  }
+  .editor-document {
+    animation: naro-enter 900ms 340ms var(--motion-ease) both;
+  }
+  .naro-connector {
+    animation: naro-enter 800ms 520ms var(--motion-ease) both;
+  }
+  .route-outbound {
+    stroke-dasharray: 1;
+    animation: naro-route 1200ms 500ms var(--motion-ease) both;
+  }
+  .route-inbound {
+    animation: naro-return 3600ms 900ms ease-out both;
+  }
+  .route-return {
+    animation: naro-enter 700ms 1100ms var(--motion-ease) both;
+  }
+  .editor-body .writing-line {
+    transform-origin: left center;
+    animation: naro-write 900ms 800ms var(--motion-ease) both;
+  }
+  .editor-body .writing-line:nth-child(3) {
+    animation-delay: 950ms;
+  }
+  .editor-body .writing-line:nth-child(4) {
+    animation-delay: 1100ms;
+  }
+  .editor-body .writing-line:last-child {
+    animation-delay: 1250ms;
+  }
+
+  .primary-link,
+  .repo-link {
+    transition:
+      background-color 180ms ease,
+      box-shadow 250ms ease,
+      translate 250ms var(--motion-ease),
+      scale 180ms var(--motion-ease);
+  }
+  .primary-link:active,
+  .repo-link:active {
+    scale: 0.98;
+  }
+  .text-link span,
+  .privacy-link span,
+  .guide-meta > span:last-child,
+  .guide-index a > span:last-child {
+    display: inline-block;
+    transition: translate 250ms var(--motion-ease);
+  }
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 1px;
+    background: currentColor;
+    scale: 0 1;
+    transform-origin: left center;
+    transition: scale 250ms var(--motion-ease);
+  }
+  .nav-links a:focus-visible::after {
+    scale: 1;
+  }
+  .guide-art {
+    transition:
+      translate 400ms var(--motion-ease),
+      box-shadow 400ms var(--motion-ease);
+  }
+  .guide-art-start img,
+  .poster-accounts,
+  .poster-route {
+    transition: translate 500ms var(--motion-ease);
+  }
+  .guide-card:focus-visible .guide-art {
+    translate: 0 -4px;
+    box-shadow: 0 12px 24px -12px #243a6b40;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .primary-link:hover {
+      translate: 0 -2px;
+      box-shadow: 0 7px 18px -7px #2368da70;
+    }
+    .repo-link:hover {
+      translate: 0 -2px;
+    }
+    .nav-links a:hover::after {
+      scale: 1;
+    }
+    .text-link:hover span,
+    .privacy-link:hover span,
+    .guide-card:hover .guide-meta > span:last-child {
+      translate: 3px -2px;
+    }
+    .guide-index a:hover > span:last-child {
+      translate: 0 3px;
+    }
+    .guide-card:hover .guide-art {
+      translate: 0 -4px;
+      box-shadow: 0 12px 24px -12px #243a6b40;
+    }
+    .guide-card:hover .guide-art-start img,
+    .guide-card:hover .poster-accounts,
+    .guide-card:hover .poster-route {
+      translate: 0 -5px;
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    .product-copy,
+    .product-figure,
+    .section-heading,
+    .steps > article,
+    .formats > article,
+    .quiet-grid > div,
+    .guide-cards > article,
+    .guides-footer,
+    .guide-aside,
+    .guide-steps > li,
+    .guide-note,
+    .guide-end {
+      animation: naro-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 85%;
+    }
+    .steps > article:nth-child(2),
+    .formats > article:nth-child(2),
+    .guide-cards > article:nth-child(2) {
+      animation-range: entry 0% entry 95%;
+    }
+    .steps > article:nth-child(3),
+    .formats > article:nth-child(3),
+    .guide-cards > article:nth-child(3) {
+      animation-range: entry 0% entry 100%;
+    }
+    :is(
+      .product-copy,
+      .product-figure,
+      .section-heading,
+      .steps > article,
+      .formats > article,
+      .quiet-grid > div,
+      .guide-cards > article,
+      .guides-footer,
+      .guide-aside,
+      .guide-steps > li,
+      .guide-note,
+      .guide-end
+    ):focus-within {
+      animation: none;
+    }
+  }
+}
+
+@keyframes naro-enter {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes naro-reveal {
+  from {
+    opacity: 0.25;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes naro-route {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes naro-return {
+  from {
+    stroke-dashoffset: 60;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes naro-write {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

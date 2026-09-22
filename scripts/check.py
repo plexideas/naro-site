@@ -90,9 +90,10 @@ for path in ROOT.rglob("*"):
         if re.search(r"AIza[0-9A-Za-z_-]{30,}|gh[pousr]_[0-9A-Za-z]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----", text):
             errors.append(f"Possible credential: {path.relative_to(ROOT)}")
 
-css = (DOCS / "styles.css").read_text()
-if css.count("{") != css.count("}"):
-    errors.append("Unbalanced CSS braces")
+for path in DOCS.glob("*.css"):
+    css = path.read_text()
+    if css.count("{") != css.count("}"):
+        errors.append(f"Unbalanced CSS braces: {path.name}")
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"PASS: {len(pages)} pages; HTML structure, local links, metadata, whitespace, and credential-pattern checks.")

@@ -65,7 +65,7 @@ Netlify reads `netlify.toml` automatically. See [DEPLOY.md](DEPLOY.md) for step-
 
 ## Website development
 
-The site is static HTML and CSS with no JavaScript, external fonts, analytics, or build dependencies. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
+The site is static HTML and CSS with no JavaScript, external fonts, analytics, or build dependencies. Motion is CSS-only: entrance and scroll effects, button and card interactions, with a static fallback and support for reduced motion. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
 
 ```sh
 python3 scripts/check.py
