@@ -5,7 +5,7 @@
 <h1 align="center">Naro</h1>
 <p align="center"><strong>Your files. Google’s editors. One double-click.</strong></p>
 <p align="center">A native macOS app for opening Office files in Google Docs, Sheets, and Slides<br>and bringing saved changes back to your Mac.</p>
-<p align="center"><a href="https://plexideas.github.io/naro/">Website</a> · <a href="https://plexideas.github.io/naro/privacy.html">Privacy</a> · <a href="https://github.com/plexideas/naro/issues">Support</a></p>
+<p align="center"><a href="DEPLOY.md">Deploy to Netlify</a> · <a href="docs/privacy.html">Privacy</a> · <a href="https://github.com/plexideas/naro-site/issues">Support</a></p>
 
 > **In development.** No public installer is available yet. The current build targets Apple Silicon and macOS 26+. This repository contains the public information website and documentation; the application source is not included.
 
@@ -43,15 +43,29 @@
 
 ## Privacy and support
 
-See the [privacy policy](https://plexideas.github.io/naro/privacy.html) for account data, document storage, backups, and deletion instructions, and the [terms of use](https://plexideas.github.io/naro/terms.html) for practical limitations.
+See the [privacy policy](docs/privacy.html) for account data, document storage, backups, and deletion instructions, and the [terms of use](docs/terms.html) for practical limitations.
 
-For questions and feedback, [open an issue](https://github.com/plexideas/naro/issues). Issues are public: never attach credentials or private documents.
+For questions and feedback, [open an issue](https://github.com/plexideas/naro-site/issues). Issues are public: never attach credentials or private documents.
 
 Naro is independently developed by [Sergei Sakharovskii (@plexideas)](https://github.com/plexideas). It is not affiliated with Google, Microsoft, or Apple.
 
+## Deploy to Netlify
+
+Import **[plexideas/naro-site](https://github.com/plexideas/naro-site)** into Netlify:
+
+| Setting               | Value       |
+| --------------------- | ----------- |
+| Production branch     | `main`      |
+| Base directory        | Leave empty |
+| Build command         | Leave empty |
+| Publish directory     | `docs`      |
+| Environment variables | None        |
+
+Netlify reads `netlify.toml` automatically. See [DEPLOY.md](DEPLOY.md) for step-by-step instructions in Russian. You can connect your own domain after the first deployment. This repository is prepared for deployment; a Netlify project has not been created on your behalf.
+
 ## Website development
 
-The site is static HTML and CSS with no JavaScript, external fonts, analytics, or build dependencies. GitHub Pages serves the `docs/` directory from `main`.
+The site is static HTML and CSS with no JavaScript, external fonts, analytics, or build dependencies. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
 
 ```sh
 python3 scripts/check.py

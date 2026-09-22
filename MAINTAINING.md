@@ -1,8 +1,9 @@
 # Maintaining the Naro website
 
 - Keep this website checkout separate from the native application project.
-- GitHub repository: `plexideas/naro`.
-- Pages source: `main`, `/docs`.
+- GitHub repository: `plexideas/naro-site`.
+- Netlify publish directory: `docs`; production branch: `main`.
+- No build command, dependencies, backend, or environment variables are required.
 - Never add OAuth client JSON, tokens, `.env` files, local account data, private documents, or native build artifacts to this repository.
 - The screenshot comes from the app’s isolated integration run and contains only sample files and an `example.com` address.
 - Existing Naro and document icons are used without alteration.
@@ -11,12 +12,14 @@
 
 Run `python3 scripts/check.py` to lint public files and validate local links, metadata, and asset references. Preview desktop and mobile layouts before design changes. Public downloads must not be announced until an installer is actually published and tested.
 
-## Before submitting to Google
+## Domain and Google verification
 
-The GitHub Pages URL is a public preview, not proof of verified domain ownership. Connect an owned domain, complete the Google Search Console domain verification, and then update canonical public links in the site and README. Keep a reachable support email in Google Auth Platform and add the chosen public support address to the site.
+Connect an owned domain in Netlify and complete Google Search Console domain verification before submitting it for Google branding verification. No production URL is hard-coded in the HTML: internal links and assets work on both a Netlify preview and the final domain.
 
-The privacy page describes the current implementation. Recheck it against each release, including any future update service or diagnostics. Removing an account currently clears local authorization, but users must revoke Google access separately.
+After the final domain is known, add canonical URLs and an absolute `og:image` URL for social previews, and link the deployed site from this README and the GitHub repository homepage. Keep a reachable support email in Google Auth Platform and add the chosen public support address to the site.
+
+The privacy page describes the current app and planned Netlify hosting. Recheck it against each release, including any future update service or diagnostics. Removing an account currently clears local authorization, but users must revoke Google access separately.
 
 ## Scope
 
-No application binaries, update feed, automatic updater, or Google Console changes are published by this website repository. No application license has been selected.
+This repository contains the website only. No application binaries, update feed, automatic updater, or Google Console changes are published by it. No application license has been selected. The owner connects the repository to Netlify; no Netlify deployment has been created by preparing this repository.
