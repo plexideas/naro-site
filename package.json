@@ -1,0 +1,21 @@
+{
+  "name": "naro-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "check": "python3 scripts/check.py && tsc --noEmit",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.0",
+    "@netlify/functions": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  }
+}

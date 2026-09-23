@@ -2,7 +2,7 @@
 
 Репозиторий сайта: **https://github.com/plexideas/naro-site**.
 
-Сайт готов: это обычные HTML/CSS-файлы с изображениями. Устанавливать зависимости, настраивать сервер или добавлять Google OAuth-секреты не нужно.
+Действующий проект Netlify: **naro-app**, домен **naro.tools**. Страницы статические; для статистики используются Netlify Functions и Blobs. Зависимости и проверки запускаются автоматически. Google OAuth-секреты не нужны.
 
 ## Подключение GitHub
 
@@ -14,7 +14,7 @@
    | Поле                  | Значение        |
    | --------------------- | --------------- |
    | Base directory        | Оставить пустым |
-   | Build command         | Оставить пустым |
+   | Build command         | Из `netlify.toml` |
    | Publish directory     | `docs`          |
    | Environment variables | Не нужны        |
 
@@ -42,8 +42,11 @@
 ## Локальная проверка
 
 ```sh
-python3 scripts/check.py
-python3 -m http.server 8080 --directory docs
+npm ci
+npm run build
+npm run check
+npm test
+npx netlify-cli dev --offline --dir docs
 ```
 
-Откройте `http://localhost:8080`. Деплой в Netlify выполняет владелец проекта; здесь подготовлены только файлы и настройки.
+Откройте адрес, который напечатает Netlify. Локальные события сохраняются отдельно от рабочего сайта. Перед публикацией выполните проверки, затем отправьте изменения в `main` и дождитесь успешного Netlify deploy. Проверьте `/stats` и `/api/analytics`; ключи и личные данные в публичные файлы не добавляются.

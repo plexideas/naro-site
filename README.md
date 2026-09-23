@@ -57,22 +57,30 @@ Import **[plexideas/naro-site](https://github.com/plexideas/naro-site)** into Ne
 | --------------------- | ----------- |
 | Production branch     | `main`      |
 | Base directory        | Leave empty |
-| Build command         | Leave empty |
+| Build command         | From `netlify.toml` |
 | Publish directory     | `docs`      |
 | Environment variables | None        |
 
-Netlify reads `netlify.toml` automatically. See [DEPLOY.md](DEPLOY.md) for step-by-step instructions in Russian. You can connect your own domain after the first deployment. This repository is prepared for deployment; a Netlify project has not been created on your behalf.
+Netlify reads `netlify.toml` automatically. The existing project is `naro-app`, serving `naro.tools`. See [DEPLOY.md](DEPLOY.md) for publishing instructions in Russian.
 
 ## Website development
 
-The site is static HTML and CSS with one small local language-selection script and no external fonts, analytics, or runtime translation service. Edit `templates/` and the nine JSON catalogs in `locales/`, then run `python3 scripts/build.py` to generate the 36 pages in `docs/`. Language links preserve the current page. Unprefixed URLs automatically use the saved language preference or the first supported browser language; explicit language URLs stay as shared. Only a manual language choice is saved in local storage. English is served at `/`; other languages have their own paths. Each edition includes matching screenshots captured from the localized native app. Motion is CSS-only: entrance and scroll effects, button and card interactions, with a static fallback and support for reduced motion. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
+The site is static HTML and CSS with local language-selection and analytics scripts. Edit `templates/` and the nine JSON catalogs in `locales/`, then run `npm run build` to generate the 36 pages in `docs/`. Language links preserve the current page. Unprefixed URLs use the saved language preference or supported browser language; explicit language URLs stay as shared. Only a manual language choice is saved in local storage. Each edition includes matching screenshots. Netlify serves `docs/` from `main` and runs the configured checks during deployment. Analytics uses Netlify Functions and Blobs without an external analytics account or additional environment variables.
 
 ```sh
-python3 scripts/build.py
-python3 scripts/check.py
-python3 -m http.server 8080 --directory docs
+npm ci
+npm run build
+npm run check
+npm test
+npx netlify-cli dev --offline --dir docs
 ```
 
-Open `http://localhost:8080`. See [MAINTAINING.md](MAINTAINING.md) for publishing and Google verification preparation.
+Open the local URL printed by Netlify. See [MAINTAINING.md](MAINTAINING.md) for publishing and Google verification preparation.
+
+## Statistics
+
+Open **[naro.tools/stats](https://naro.tools/stats)** to see daily visitors, visitors who clicked Download, and GitHub DMG/ZIP downloads by release. No additional account or setup is needed. Website data starts at the first visit after activation and covers the last 30 UTC days. GitHub counters cover all currently published releases, including downloads before activation.
+
+Daily visitor counts are estimates; clicks do not prove completed downloads, and GitHub file download counts include repeats and updates. The dashboard itself sends no analytics. Only aggregate data is public. See [MAINTAINING.md](MAINTAINING.md#analytics) for definitions, retention and verification.
 
 The repository contains public website materials only. No open-source license for the macOS application is granted here.

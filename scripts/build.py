@@ -74,6 +74,8 @@ class Render(HTMLParser):
         if tag == "head":
             script = os.path.relpath(DOCS / "language.js", directory(self.language))
             self.output.append(f'<script src="{script}"></script>\n')
+            analytics = os.path.relpath(DOCS / "analytics.js", directory(self.language))
+            self.output.append(f'<script defer src="{analytics}"></script>\n')
             for code in LANGUAGES:
                 self.output.append(f'<link rel="alternate" hreflang="{code}" href="{public_url(code, self.page)}" />\n')
             self.output.append(f'<link rel="alternate" hreflang="x-default" href="{public_url("en", self.page)}" />\n')

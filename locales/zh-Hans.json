@@ -221,7 +221,6 @@
   "Application updates": "应用程序更新",
   "Naro checks GitHub Releases for new versions by default. You can disable automatic checks in the app. Checking for updates or downloading a release sends technical connection information, such as your IP address, to GitHub. These requests do not include your Google tokens or documents. Installation and restart happen only when you choose to update.": "Naro 默认检查 GitHub 版本是否有新版本。您可以在应用程序中禁用自动检查。检查更新或下载版本会将技术连接信息（例如您的 IP 地址）发送到 GitHub。这些请求不包括您的 Google 令牌或文档。仅当您选择更新时才会进行安装和重新启动。",
   "This website": "这个网站",
-  "This website is hosted on Netlify and delivered through Cloudflare. The website code does not add analytics, advertising, tracking scripts, or cookies. The hosting and delivery providers may process technical access information, including IP addresses, to operate and secure the website, as described in the": "该网站托管在 Netlify 上并通过 Cloudflare 交付。网站代码不添加分析、广告、跟踪脚本或 cookie。托管和交付提供商可能会处理技术访问信息（包括 IP 地址），以操作和保护网站，如",
   "Cloudflare Privacy Policy": "Cloudflare 隐私政策",
   "and the": "和",
   "Netlify Privacy Policy": "Netlify 隐私政策",
@@ -236,5 +235,8 @@
   "Choose language": "选择语言",
   "The app is available in English, Russian, Simplified Chinese, Korean, Japanese, Spanish, German, Italian and French.": "该应用程序有英语、俄语、简体中文、韩语、日语、西班牙语、德语、意大利语和法语版本。",
   "While Naro is running and online, it checks linked files for changes. It can download updates only after Google has saved them. Saving time also depends on the network and file size; it is not instantaneous.": "Naro 运行并联网时会检查关联文件的更改。只有在 Google 保存后才能下载更新。保存时间还取决于网络和文件大小，并非即时完成。",
-  "Your language is detected from your browser. If you choose a different language, this website remembers only that preference in your browser’s local storage.": "网站根据您的浏览器设置选择语言。如果您选择其他语言，网站只会将此语言偏好保存在浏览器的本地存储中。"
+  "Your language is detected from your browser. If you choose a different language, this website remembers only that preference in your browser’s local storage.": "网站根据您的浏览器设置选择语言。如果您选择其他语言，网站只会将此语言偏好保存在浏览器的本地存储中。",
+  "This website is hosted on Netlify and delivered through Cloudflare. The hosting and delivery providers may process technical access information, including IP addresses, to operate and secure the website, as described in the": "本网站由 Netlify 托管，并通过 Cloudflare 分发。这些服务商可能处理包括 IP 地址在内的技术访问信息，以运营和保护网站，详情参见",
+  "We count daily visitors and download-link clicks using Netlify. A daily salted hash of the IP address and browser information groups repeat visits; our analytics database does not store raw IP addresses or browser information. Analytics uses no cookies or browser storage. Event records are retained for 30 days; daily salts for up to two days. Only aggregate counts are displayed. Download clicks do not confirm completed downloads or installation.": "我们通过 Netlify 统计每日访客和下载链接点击次数。使用每日更换的随机盐对 IP 地址和浏览器信息进行哈希处理，以合并重复访问；分析数据库不保存原始 IP 地址或浏览器信息。分析不使用 Cookie 或浏览器存储。事件记录保留30天，每日盐值最多保留两天。仅显示汇总数据。点击并不代表下载完成或已安装。",
+  "Last updated September 24, 2026": "最后更新：2026年9月24日"
 }

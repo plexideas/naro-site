@@ -1,2 +1,10 @@
 [build]
   publish = "docs"
+  command = "npm run build && npm run check && npm test"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

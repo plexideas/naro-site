@@ -221,7 +221,6 @@
   "Application updates": "애플리케이션 업데이트",
   "Naro checks GitHub Releases for new versions by default. You can disable automatic checks in the app. Checking for updates or downloading a release sends technical connection information, such as your IP address, to GitHub. These requests do not include your Google tokens or documents. Installation and restart happen only when you choose to update.": "Naro는 기본적으로 GitHub 릴리스에서 새 버전을 확인합니다. 앱에서 자동 검사를 비활성화할 수 있습니다. 업데이트를 확인하거나 릴리스를 다운로드하면 IP 주소와 같은 기술 연결 정보가 GitHub로 전송됩니다. 이러한 요청에는 Google 토큰이나 문서가 포함되지 않습니다. 업데이트를 선택한 경우에만 설치 및 다시 시작이 수행됩니다.",
   "This website": "이 웹사이트",
-  "This website is hosted on Netlify and delivered through Cloudflare. The website code does not add analytics, advertising, tracking scripts, or cookies. The hosting and delivery providers may process technical access information, including IP addresses, to operate and secure the website, as described in the": "이 웹사이트는 Netlify에서 호스팅되며 Cloudflare를 통해 제공됩니다. 웹사이트 코드는 분석, 광고, 추적 스크립트 또는 쿠키를 추가하지 않습니다. 호스팅 및 배송 제공업체는 웹사이트를 운영하고 보호하기 위해 IP 주소를 포함한 기술적 접근 정보를 처리할 수 있습니다.",
   "Cloudflare Privacy Policy": "Cloudflare 개인정보 보호정책",
   "and the": "그리고",
   "Netlify Privacy Policy": "넷리파이 개인정보 보호정책",
@@ -236,5 +235,8 @@
   "Choose language": "언어 선택",
   "The app is available in English, Russian, Simplified Chinese, Korean, Japanese, Spanish, German, Italian and French.": "이 앱은 영어, 러시아어, 중국어 간체, 한국어, 일본어, 스페인어, 독일어, 이탈리아어, 프랑스어로 제공됩니다.",
   "While Naro is running and online, it checks linked files for changes. It can download updates only after Google has saved them. Saving time also depends on the network and file size; it is not instantaneous.": "Naro가 실행 중이고 인터넷에 연결되어 있으면 연결된 파일의 변경 사항을 확인합니다. Google에서 저장을 마쳐야 업데이트를 다운로드할 수 있습니다. 저장 시간은 네트워크와 파일 크기에도 영향을 받으며 즉시 완료되지는 않습니다.",
-  "Your language is detected from your browser. If you choose a different language, this website remembers only that preference in your browser’s local storage.": "브라우저 설정에 따라 언어가 자동으로 선택됩니다. 다른 언어를 선택하면 웹사이트는 해당 언어 설정만 브라우저의 로컬 저장소에 저장합니다."
+  "Your language is detected from your browser. If you choose a different language, this website remembers only that preference in your browser’s local storage.": "브라우저 설정에 따라 언어가 자동으로 선택됩니다. 다른 언어를 선택하면 웹사이트는 해당 언어 설정만 브라우저의 로컬 저장소에 저장합니다.",
+  "This website is hosted on Netlify and delivered through Cloudflare. The hosting and delivery providers may process technical access information, including IP addresses, to operate and secure the website, as described in the": "이 웹사이트는 Netlify에서 호스팅되며 Cloudflare를 통해 제공됩니다. 이들 제공업체는 사이트 운영과 보호를 위해 IP 주소를 포함한 기술적 접속 정보를 처리할 수 있습니다. 자세한 내용은 다음 정책을 확인하세요:",
+  "We count daily visitors and download-link clicks using Netlify. A daily salted hash of the IP address and browser information groups repeat visits; our analytics database does not store raw IP addresses or browser information. Analytics uses no cookies or browser storage. Event records are retained for 30 days; daily salts for up to two days. Only aggregate counts are displayed. Download clicks do not confirm completed downloads or installation.": "Netlify를 사용해 일별 방문자와 다운로드 링크 클릭 수를 집계합니다. IP 주소와 브라우저 정보를 매일 바뀌는 임의의 솔트로 해시하여 반복 방문을 묶으며, 분석 데이터베이스에는 원래 IP 주소나 브라우저 정보를 저장하지 않습니다. 분석에는 쿠키나 브라우저 저장소를 사용하지 않습니다. 이벤트는 30일, 일별 솔트는 최대 2일 보관합니다. 집계된 수치만 표시합니다. 클릭은 다운로드 완료나 설치를 확인하지 않습니다.",
+  "Last updated September 24, 2026": "최종 업데이트: 2026년 9월 24일"
 }

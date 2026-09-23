@@ -36,8 +36,8 @@ class Page(HTMLParser):
             self.ids.add(a["id"])
         if tag == "img" and "alt" not in a:
             errors.append("Image without alt text")
-        if tag == "script" and a.get("src") not in {"language.js", "../language.js"}:
-            errors.append("Unexpected script: only the local language preference helper is allowed")
+        if tag == "script" and a.get("src") not in {"language.js", "../language.js", "analytics.js", "../analytics.js", "stats.mjs"}:
+            errors.append("Unexpected script: only local language, analytics and statistics helpers are allowed")
         for key in ("href", "src"):
             if key in a:
                 self.links.append(a[key])
@@ -81,9 +81,9 @@ for path, page in pages.items():
             errors.append(f"Broken anchor in {path.name}: {link}")
 
 for path in ROOT.rglob("*"):
-    if not path.is_file() or any(part in {".git", "node_modules", ".preview"} for part in path.parts):
+    if not path.is_file() or any(part in {".git", "node_modules", ".preview", ".netlify"} for part in path.parts):
         continue
-    if path.suffix in {".html", ".css", ".md", ".py", ".js", ".cjs"} or path.name == ".gitignore":
+    if path.suffix in {".html", ".css", ".md", ".py", ".js", ".cjs", ".mjs", ".mts"} or path.name == ".gitignore":
         text = path.read_text()
         if not text.endswith("\n") or any(line.rstrip() != line for line in text.splitlines()):
             errors.append(f"Whitespace lint: {path.relative_to(ROOT)}")

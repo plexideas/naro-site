@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Посетители сайта Naro и скачивания приложения по дням и версиям." />
+    <title>Статистика — Naro</title>
+    <link rel="icon" href="assets/naro.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stats.css" />
+    <script type="module" src="stats.mjs"></script>
+  </head>
+  <body>
+    <header class="stats-header">
+      <a class="brand" href="ru/index.html"><img src="assets/naro.png" alt="" width="32" height="32" />Naro</a>
+      <a href="ru/index.html">На сайт ↗</a>
+    </header>
+    <main class="stats-main">
+      <div class="stats-heading">
+        <div><p class="kicker">Naro · статистика</p><h1>Посещения и скачивания</h1></div>
+        <button id="refresh" type="button">Обновить</button>
+      </div>
+      <p class="stats-intro">Посетители сайта — по дням. Загрузки приложения — по данным GitHub.</p>
+      <noscript><p>Включите JavaScript, чтобы загрузить статистику.</p></noscript>
+      <section aria-labelledby="today-title">
+        <h2 id="today-title">Сегодня</h2>
+        <p id="visits-status" role="status" aria-live="polite">Загружаю посещения…</p>
+        <dl class="stats-cards">
+          <div><dt>Посетители сайта</dt><dd id="visitors">—</dd></div>
+          <div><dt>Нажали «Скачать»</dt><dd id="downloaders">—</dd></div>
+          <div><dt>Доля нажавших «Скачать»</dt><dd id="conversion">—</dd></div>
+        </dl>
+        <p class="stats-note">Один посетитель учитывается один раз в день. Повторные визиты и клики в тот же день не увеличивают эти показатели. Дни считаются по UTC.</p>
+      </section>
+      <section aria-labelledby="downloads-title">
+        <h2 id="downloads-title">Скачивания за всё время</h2>
+        <p id="downloads-status" role="status" aria-live="polite">Загружаю скачивания…</p>
+        <dl class="stats-cards downloads">
+          <div><dt>Установщик DMG</dt><dd id="dmg-count">—</dd></div>
+          <div><dt>ZIP, Homebrew и обновления</dt><dd id="zip-count">—</dd></div>
+        </dl>
+        <p class="stats-note">GitHub считает загрузки файлов, включая повторные и автоматические. Это не число уникальных людей или установок. Нажатие «Скачать» на сайте не подтверждает завершение загрузки.</p>
+      </section>
+      <section aria-labelledby="days-title">
+        <h2 id="days-title">Последние 30 дней</h2>
+        <p class="stats-note" id="collection-status">Посещения учитываются с момента подключения счётчика. Более ранних данных нет.</p>
+        <div class="table-wrap"><table>
+          <caption class="visually-hidden">Посетители и нажатия «Скачать» по дням UTC</caption>
+          <thead><tr><th scope="col">Дата</th><th scope="col">Посетители</th><th scope="col">Нажали «Скачать»</th></tr></thead>
+          <tbody id="days"></tbody>
+        </table></div>
+      </section>
+      <section aria-labelledby="versions-title">
+        <h2 id="versions-title">Загрузки по версиям</h2>
+        <div class="table-wrap"><table>
+          <caption class="visually-hidden">Скачивания файлов по данным GitHub</caption>
+          <thead><tr><th scope="col">Версия</th><th scope="col">DMG</th><th scope="col">ZIP</th></tr></thead>
+          <tbody id="releases"></tbody>
+        </table></div>
+      </section>
+      <p class="stats-note">Оценка посетителей может объединять людей с одинаковой сетью и браузером или считать одного человека несколько раз при смене сети. Блокировщики и боты влияют на точность. Страница показывает только общие счётчики; имён, IP-адресов и данных Google здесь нет.</p>
+    </main>
+  </body>
+</html>
