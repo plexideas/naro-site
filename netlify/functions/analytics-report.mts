@@ -14,5 +14,5 @@ export default async (request: Request, context: Context) => {
 
 export const config: Config = {
   path: "/api/analytics",
-  rateLimit: { windowSize: 60, windowLimit: 30, aggregateBy: "ip" },
+  rateLimit: { windowSize: 60, windowLimit: 30, aggregateBy: ["ip", "domain"] },
 };
