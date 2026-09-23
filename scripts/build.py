@@ -95,7 +95,9 @@ class Render(HTMLParser):
             return
         leading = value[:len(value) - len(value.lstrip())]
         trailing = value[len(value.rstrip()):]
-        self.output.append(leading + html.escape(self.translate(value.strip()), quote=False) + trailing)
+        arrow = '<svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg>'
+        translated = html.escape(self.translate(value.strip()), quote=False).replace("↗", arrow)
+        self.output.append(leading + translated + trailing)
 
 
 def main():
