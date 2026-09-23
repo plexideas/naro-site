@@ -1519,37 +1519,51 @@ footer nav a {
 .languages:last-child { border: 0; }
 .languages summary {
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 10px;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  font-size: 12px;
-  white-space: nowrap;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background-color 150ms, color 150ms;
 }
 .languages summary::-webkit-details-marker { display: none; }
-.languages summary::after { content: "⌄"; color: var(--muted); }
-.languages summary:hover { background: var(--pale); }
+.languages summary:hover, .languages[open] summary {
+  background: #f1f3f4;
+  color: var(--ink);
+}
+.languages summary:focus-visible { border-radius: 50%; }
 .languages nav {
   position: absolute;
-  top: calc(100% + 9px);
+  top: calc(100% + 8px);
   right: 0;
-  min-width: 178px;
-  padding: 7px;
+  width: 208px;
+  max-width: calc(100vw - 32px);
+  padding: 6px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
-  box-shadow: 0 12px 32px #182b471a;
+  box-shadow: 0 4px 20px #2021241a, 0 1px 3px #20212414;
 }
 .languages nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
   padding: 8px 12px;
   font-size: 13px;
+  line-height: 1.5;
   text-decoration: none;
   border-radius: 6px;
 }
-.languages a:hover, .languages a[aria-current] { color: var(--blue); background: var(--pale); }
+.languages a:hover { color: var(--ink); background: #f1f3f4; }
+.languages a[aria-current] { color: var(--blue); background: var(--pale); }
+.languages a[aria-current]::after { content: "✓"; margin-left: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  .languages summary { transition: none; }
+}
 .nav { gap: 22px; }
 .nav-links { gap: 20px; flex-wrap: wrap; }
 .hero > *, .product-section > *, .guide-article > * { min-width: 0; }
@@ -1569,7 +1583,6 @@ footer nav a {
 @media (max-width: 760px) {
   .nav { gap: 12px; }
   .nav-links { gap: 10px 18px; margin-bottom: 0; }
-  .languages summary { font-size: 11px; }
   .hero h1 { font-size: clamp(38px, 9vw, 58px); letter-spacing: -1.5px; }
   .footer-main { flex-wrap: wrap; }
 }

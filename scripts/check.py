@@ -36,8 +36,8 @@ class Page(HTMLParser):
             self.ids.add(a["id"])
         if tag == "img" and "alt" not in a:
             errors.append("Image without alt text")
-        if tag == "script":
-            errors.append("Unexpected script on a script-free site")
+        if tag == "script" and a.get("src") not in {"language.js", "../language.js"}:
+            errors.append("Unexpected script: only the local language preference helper is allowed")
         for key in ("href", "src"):
             if key in a:
                 self.links.append(a[key])
@@ -83,7 +83,7 @@ for path, page in pages.items():
 for path in ROOT.rglob("*"):
     if not path.is_file() or any(part in {".git", "node_modules", ".preview"} for part in path.parts):
         continue
-    if path.suffix in {".html", ".css", ".md", ".py"} or path.name == ".gitignore":
+    if path.suffix in {".html", ".css", ".md", ".py", ".js", ".cjs"} or path.name == ".gitignore":
         text = path.read_text()
         if not text.endswith("\n") or any(line.rstrip() != line for line in text.splitlines()):
             errors.append(f"Whitespace lint: {path.relative_to(ROOT)}")

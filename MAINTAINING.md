@@ -29,3 +29,5 @@ This repository contains the website only. No application binaries, update feed,
 Edit the shared English HTML in `templates/` and maintain all nine catalogs in `locales/`. Regenerate and commit `docs/` with the source changes; Netlify still serves static files without a build step. The generator requires identical catalog keys and writes canonical URLs, alternate-language links and a sitemap. Do not edit generated pages directly.
 
 Capture translated screenshots using `native/localization_integration.py` in the separate application project. Only fixture accounts and sample documents may appear. Keep the app name Naro unchanged in all translations. Check keyboard access to the language menu and desktop/mobile overflow before publishing.
+
+The compact globe menu works without JavaScript. `docs/language.js` adds browser-language detection on unprefixed URLs, remembers manual selection locally, preserves query strings and anchors, and closes the menu on Escape or an outside click. Explicit language URLs must never be redirected. Run the browser language checks after changing this behavior.

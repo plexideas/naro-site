@@ -235,5 +235,6 @@
   "Language": "언어",
   "Choose language": "언어 선택",
   "The app is available in English, Russian, Simplified Chinese, Korean, Japanese, Spanish, German, Italian and French.": "이 앱은 영어, 러시아어, 중국어 간체, 한국어, 일본어, 스페인어, 독일어, 이탈리아어, 프랑스어로 제공됩니다.",
-  "While Naro is running and online, it checks linked files for changes. It can download updates only after Google has saved them. Saving time also depends on the network and file size; it is not instantaneous.": "Naro가 실행 중이고 인터넷에 연결되어 있으면 연결된 파일의 변경 사항을 확인합니다. Google에서 저장을 마쳐야 업데이트를 다운로드할 수 있습니다. 저장 시간은 네트워크와 파일 크기에도 영향을 받으며 즉시 완료되지는 않습니다."
+  "While Naro is running and online, it checks linked files for changes. It can download updates only after Google has saved them. Saving time also depends on the network and file size; it is not instantaneous.": "Naro가 실행 중이고 인터넷에 연결되어 있으면 연결된 파일의 변경 사항을 확인합니다. Google에서 저장을 마쳐야 업데이트를 다운로드할 수 있습니다. 저장 시간은 네트워크와 파일 크기에도 영향을 받으며 즉시 완료되지는 않습니다.",
+  "Your language is detected from your browser. If you choose a different language, this website remembers only that preference in your browser’s local storage.": "브라우저 설정에 따라 언어가 자동으로 선택됩니다. 다른 언어를 선택하면 웹사이트는 해당 언어 설정만 브라우저의 로컬 저장소에 저장합니다."
 }

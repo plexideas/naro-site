@@ -62,7 +62,7 @@ class Render(HTMLParser):
             attribute("href", public_url(self.language, self.page))
         for key in ("src", "href"):
             value = values.get(key, "")
-            if value.startswith("assets/") or value.endswith(".css"):
+            if value.startswith("assets/") or value.endswith((".css", ".js")):
                 if value == "assets/naro-window.png":
                     value = f"assets/naro-window-{self.language}.png"
                 attribute(key, os.path.relpath(DOCS / value, directory(self.language)))
@@ -72,11 +72,15 @@ class Render(HTMLParser):
 
     def handle_endtag(self, tag):
         if tag == "head":
+            script = os.path.relpath(DOCS / "language.js", directory(self.language))
+            self.output.append(f'<script src="{script}"></script>\n')
             for code in LANGUAGES:
                 self.output.append(f'<link rel="alternate" hreflang="{code}" href="{public_url(code, self.page)}" />\n')
             self.output.append(f'<link rel="alternate" hreflang="x-default" href="{public_url("en", self.page)}" />\n')
         if tag == "header" and self.in_header:
-            self.output.append('<details class="languages"><summary aria-label="' + html.escape(self.translate("Choose language"), quote=True) + '"><span aria-hidden="true">◎</span> ' + LANGUAGES[self.language] + '</summary><nav aria-label="' + html.escape(self.translate("Language"), quote=True) + '">')
+            label = html.escape(self.translate("Choose language") + ": " + LANGUAGES[self.language], quote=True)
+            globe = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>'
+            self.output.append(f'<details class="languages"><summary aria-label="{label}" title="{label}">{globe}</summary><nav aria-label="' + html.escape(self.translate("Language"), quote=True) + '">')
             for code, name in LANGUAGES.items():
                 href = os.path.relpath(directory(code) / self.page, directory(self.language))
                 current = ' aria-current="true"' if code == self.language else ''
