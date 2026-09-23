@@ -65,6 +65,8 @@ Netlify reads `netlify.toml` automatically. The existing project is `naro-app`, 
 
 ## Website development
 
+Production pages include a small inline recovery script: if a stylesheet, image or script fails through the custom domain, it retries that public file once through the same site's `naro-app.netlify.app` hostname. This handles the observed intermittent 500/503 responses through the Cloudflare-to-Netlify path without changing page links or analytics endpoints. Local previews do not use the fallback. The dashboard's two public JavaScript modules allow cross-origin loading for this recovery.
+
 The site is static HTML and CSS with local language-selection and analytics scripts. Edit `templates/` and the nine JSON catalogs in `locales/`, then run `npm run build` to generate the 36 pages in `docs/`. Language links preserve the current page. Unprefixed URLs use the saved language preference or supported browser language; explicit language URLs stay as shared. Only a manual language choice is saved in local storage. Each edition includes matching screenshots. Netlify serves `docs/` from `main` and runs the configured checks during deployment. Analytics uses Netlify Functions and Blobs without an external analytics account or additional environment variables.
 
 ```sh

@@ -1,0 +1,5 @@
+/stats.mjs
+  Access-Control-Allow-Origin: *
+
+/download-stats.mjs
+  Access-Control-Allow-Origin: *

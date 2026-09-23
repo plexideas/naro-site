@@ -21,6 +21,12 @@ def public_url(language, page):
     return "https://naro.tools/" + prefix + ("" if page == "index.html" else page.removesuffix(".html"))
 
 
+def with_asset_fallback(page):
+    page = re.sub(r'\n<script data-asset-fallback>[\s\S]*?</script>', '', page)
+    script = (ROOT / "scripts/asset-fallback.js").read_text().strip()
+    return page.replace('<meta charset="utf-8" />', '<meta charset="utf-8" />\n<script data-asset-fallback>' + script + '</script>', 1)
+
+
 class Render(HTMLParser):
     def __init__(self, language, page, catalog, english):
         super().__init__(convert_charrefs=True)
@@ -112,7 +118,9 @@ def main():
         for template in sorted((ROOT / "templates").glob("*.html")):
             renderer = Render(language, template.name, catalog, english)
             renderer.feed(template.read_text())
-            (directory(language) / template.name).write_text("".join(renderer.output))
+            (directory(language) / template.name).write_text(with_asset_fallback("".join(renderer.output)))
+    stats = DOCS / "stats.html"
+    stats.write_text(with_asset_fallback(stats.read_text()))
     urls = [public_url(code, page.name) for code in LANGUAGES for page in (ROOT / "templates").glob("*.html")]
     (DOCS / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{url}</loc></url>\n" for url in urls) + "</urlset>\n")
     (DOCS / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: https://naro.tools/sitemap.xml\n")

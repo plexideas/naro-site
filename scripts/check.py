@@ -36,7 +36,7 @@ class Page(HTMLParser):
             self.ids.add(a["id"])
         if tag == "img" and "alt" not in a:
             errors.append("Image without alt text")
-        if tag == "script" and a.get("src") not in {"language.js", "../language.js", "analytics.js", "../analytics.js", "stats.mjs"}:
+        if tag == "script" and "data-asset-fallback" not in a and a.get("src") not in {"language.js", "../language.js", "analytics.js", "../analytics.js", "stats.mjs"}:
             errors.append("Unexpected script: only local language, analytics and statistics helpers are allowed")
         for key in ("href", "src"):
             if key in a:
@@ -58,6 +58,9 @@ for path in DOCS.rglob("*.html"):
     page = Page()
     text = path.read_text()
     page.feed(text)
+    fallback = (ROOT / "scripts/asset-fallback.js").read_text().strip()
+    if text.count('<script data-asset-fallback>' + fallback + '</script>') != 1:
+        errors.append(f"Missing or modified asset fallback: {path.name}")
     pages[path.resolve()] = page
     if page.stack or page.h1 != 1 or not all((page.title, page.description, page.language)):
         errors.append(f"Invalid structure/metadata: {path.name}")
