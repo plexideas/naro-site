@@ -9,7 +9,7 @@
 
 > **[Download Naro](https://github.com/plexideas/naro/releases/latest)** · **[Website](https://naro.tools/)**. The current build targets Apple Silicon and macOS 26+. This repository contains the public information website and documentation; the application source is not included.
 
-<p align="center"><img src="docs/assets/naro-window.png" width="720" alt="The actual Naro recent-documents window with sample files"></p>
+<p align="center"><img src="docs/assets/naro-window-en.png" width="720" alt="The actual Naro recent-documents window with sample files"></p>
 
 ## From Finder to Google, and back
 
@@ -39,7 +39,7 @@
 - Older Office files upgraded by Google are saved beside the original in the modern format.
 - Converting an Office file into a separate Google-native document is not tracked by its original link.
 - In-app updates download releases from GitHub and restart with user confirmation. Public Google OAuth verification is not claimed.
-- The app interface is currently in Russian.
+- The app and website support English, Russian, Simplified Chinese, Korean, Japanese, Spanish, German, Italian, and French. In the app, choose Naro → Language or follow macOS.
 
 ## Privacy and support
 
@@ -65,9 +65,10 @@ Netlify reads `netlify.toml` automatically. See [DEPLOY.md](DEPLOY.md) for step-
 
 ## Website development
 
-The site is static HTML and CSS with no JavaScript, external fonts, analytics, or build dependencies. Motion is CSS-only: entrance and scroll effects, button and card interactions, with a static fallback and support for reduced motion. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
+The site is static HTML and CSS with no JavaScript, external fonts, analytics, or runtime translation service. Edit `templates/` and the nine JSON catalogs in `locales/`, then run `python3 scripts/build.py` to generate the 36 pages in `docs/`. Language links preserve the current page. English is served at `/`; other languages have their own paths. Each edition includes matching screenshots captured from the localized native app. Motion is CSS-only: entrance and scroll effects, button and card interactions, with a static fallback and support for reduced motion. Netlify serves the `docs/` directory from `main`. The root `netlify.toml` sets the publish directory; no build command or environment variables are needed.
 
 ```sh
+python3 scripts/build.py
 python3 scripts/check.py
 python3 -m http.server 8080 --directory docs
 ```

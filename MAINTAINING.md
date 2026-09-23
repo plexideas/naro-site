@@ -10,7 +10,7 @@
 
 ## Checks before publishing
 
-Run `python3 scripts/check.py` to lint public files and validate local links, metadata, and asset references. Preview desktop and mobile layouts before design changes. Public downloads must not be announced until an installer is actually published and tested.
+Run `python3 scripts/build.py` and `python3 scripts/check.py` to lint public files and validate local links, metadata, and asset references. Preview desktop and mobile layouts before design changes. Public downloads must not be announced until an installer is actually published and tested.
 
 ## Domain and Google verification
 
@@ -23,3 +23,9 @@ The privacy page describes the current app and planned Netlify hosting. Recheck 
 ## Scope
 
 This repository contains the website only. No application binaries, update feed, automatic updater, or Google Console changes are published by it. No application license has been selected. The owner connects the repository to Netlify; no Netlify deployment has been created by preparing this repository.
+
+## Languages
+
+Edit the shared English HTML in `templates/` and maintain all nine catalogs in `locales/`. Regenerate and commit `docs/` with the source changes; Netlify still serves static files without a build step. The generator requires identical catalog keys and writes canonical URLs, alternate-language links and a sitemap. Do not edit generated pages directly.
+
+Capture translated screenshots using `native/localization_integration.py` in the separate application project. Only fixture accounts and sample documents may appear. Keep the app name Naro unchanged in all translations. Check keyboard access to the language menu and desktop/mobile overflow before publishing.

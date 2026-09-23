@@ -1508,3 +1508,72 @@ footer nav a {
     font-size: 28px;
   }
 }
+
+.languages {
+  position: relative;
+  flex: 0 0 auto;
+  border: 0;
+  padding: 0;
+  z-index: 20;
+}
+.languages:last-child { border: 0; }
+.languages summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.languages summary::-webkit-details-marker { display: none; }
+.languages summary::after { content: "⌄"; color: var(--muted); }
+.languages summary:hover { background: var(--pale); }
+.languages nav {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  min-width: 178px;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px #182b471a;
+}
+.languages nav a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.languages a:hover, .languages a[aria-current] { color: var(--blue); background: var(--pale); }
+.nav { gap: 22px; }
+.nav-links { gap: 20px; flex-wrap: wrap; }
+.hero > *, .product-section > *, .guide-article > * { min-width: 0; }
+.hero h1 { overflow-wrap: anywhere; font-size: clamp(40px, 4.5vw, 64px); }
+.hero-actions { flex-wrap: wrap; }
+:lang(zh-Hans), :lang(ja), :lang(ko) { letter-spacing: normal; }
+:lang(zh-Hans) h1, :lang(ja) h1, :lang(ko) h1 { line-height: 1.18; letter-spacing: -1px; }
+:lang(zh-Hans) h2, :lang(ja) h2, :lang(ko) h2 { line-height: 1.3; letter-spacing: normal; }
+.document-location, .poster-note { max-width: 86%; }
+.local-document strong { overflow-wrap: anywhere; }
+.poster-word { max-width: 83%; overflow-wrap: anywhere; }
+@media (max-width: 1100px) {
+  .nav { flex-wrap: wrap; }
+  .nav-links { order: 4; width: 100%; justify-content: center; margin: 0 0 12px; }
+  .repo-link { margin-left: auto; }
+}
+@media (max-width: 760px) {
+  .nav { gap: 12px; }
+  .nav-links { gap: 10px 18px; margin-bottom: 0; }
+  .languages summary { font-size: 11px; }
+  .hero h1 { font-size: clamp(38px, 9vw, 58px); letter-spacing: -1.5px; }
+  .footer-main { flex-wrap: wrap; }
+}
+.prose h1 { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .prose h1 { font-size: 34px; }
+}

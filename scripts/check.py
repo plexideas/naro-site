@@ -54,7 +54,7 @@ class Page(HTMLParser):
             errors.append(f"Mismatched closing tag: {tag}")
 
 pages = {}
-for path in DOCS.glob("*.html"):
+for path in DOCS.rglob("*.html"):
     page = Page()
     text = path.read_text()
     page.feed(text)

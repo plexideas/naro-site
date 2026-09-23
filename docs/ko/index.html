@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Naro — Mac의 Google 편집기에서 Office 파일 열기</title>
+    <meta
+      name="description"
+      content="Naro는 Google Docs, Sheets, Slides에서 Word, Excel, PowerPoint 파일을 열고 저장된 변경 사항을 Mac에 다시 동기화하는 macOS 앱입니다."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Naro — Mac의 Google 편집기에서 Office 파일 열기" />
+    <meta
+      property="og:description"
+      content="Naro는 Google Docs, Sheets, Slides에서 Word, Excel, PowerPoint 파일을 열고 저장된 변경 사항을 Mac에 다시 동기화하는 macOS 앱입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://naro.tools/ko/" />
+    <meta property="og:image" content="https://naro.tools/assets/naro.png" />
+    <link rel="canonical" href="https://naro.tools/ko/" />
+    <link rel="icon" href="../assets/naro.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../motion.css" />
+  <link rel="alternate" hreflang="en" href="https://naro.tools/" />
+<link rel="alternate" hreflang="ru" href="https://naro.tools/ru/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://naro.tools/zh/" />
+<link rel="alternate" hreflang="ko" href="https://naro.tools/ko/" />
+<link rel="alternate" hreflang="ja" href="https://naro.tools/ja/" />
+<link rel="alternate" hreflang="es" href="https://naro.tools/es/" />
+<link rel="alternate" hreflang="de" href="https://naro.tools/de/" />
+<link rel="alternate" hreflang="it" href="https://naro.tools/it/" />
+<link rel="alternate" hreflang="fr" href="https://naro.tools/fr/" />
+<link rel="alternate" hreflang="x-default" href="https://naro.tools/" />
+</head>
+  <body>
+    <a class="skip" href="#main">콘텐츠로 건너뛰기</a>
+    <header class="wrap nav">
+      <a class="brand" href="./" aria-label="Naro집"
+        ><img src="../assets/naro.png" alt="" width="38" height="38" /><span
+          >Naro</span><span class="brand-detail">Mac용</span></a>
+      <nav class="nav-links" aria-label="메인 네비게이션">
+        <a href="./#how-it-works">작동 원리</a><a class="optional" href="./#formats">파일 형식</a><a href="guides.html">가이드</a><a href="privacy.html">개인정보 보호</a>
+      </nav>
+      <a class="repo-link" href="https://github.com/plexideas/naro-site"
+        >GitHub <span aria-hidden="true">↗</span></a>
+    <details class="languages"><summary aria-label="언어 선택"><span aria-hidden="true">◎</span> 한국어</summary><nav aria-label="언어"><a href="../index.html" lang="en" hreflang="en">English</a><a href="../ru/index.html" lang="ru" hreflang="ru">Русский</a><a href="../zh/index.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="index.html" lang="ko" hreflang="ko" aria-current="true">한국어</a><a href="../ja/index.html" lang="ja" hreflang="ja">日本語</a><a href="../es/index.html" lang="es" hreflang="es">Español</a><a href="../de/index.html" lang="de" hreflang="de">Deutsch</a><a href="../it/index.html" lang="it" hreflang="it">Italiano</a><a href="../fr/index.html" lang="fr" hreflang="fr">Français</a></nav></details></header>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>macOS에 연결된 Office 파일
+          </p>
+          <h1 id="hero-title">
+            <span>Naro</span><br />내 파일.<br />Google 편집기.
+          </h1>
+          <p class="lead">
+            Naro는 Google Docs, Sheets, Slides에서 Word, Excel, PowerPoint 파일을 연 다음 앱이 실행 중이고 온라인인 동안 저장된 변경 사항을 Mac에 다시 동기화하는 macOS 앱입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="https://github.com/plexideas/naro/releases/latest"
+              >Naro 다운로드</a><a class="text-link" href="#how-it-works"
+              >작동 방식 보기 <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="availability">
+            Apple Silicon · macOS 26 이상에서 사용 가능
+          </p>
+        </div>
+        <figure
+          class="journey"
+          aria-label="Naro는 로컬 Office 문서를 Google 편집기에 연결하고 저장된 변경 사항을 Mac으로 다시 가져옵니다."
+        >
+          <div class="journey-canvas" aria-hidden="true">
+            <div class="journey-grid"></div>
+            <svg class="route-lines" viewBox="0 0 600 560" fill="none">
+              <defs>
+                <marker
+                  id="route-arrow"
+                  viewBox="0 0 10 10"
+                  refX="8"
+                  refY="5"
+                  markerWidth="7"
+                  markerHeight="7"
+                  orient="auto-start-reverse"
+                >
+                  <path
+                    d="M 1 1 L 8 5 L 1 9"
+                    stroke="#3980ed"
+                    stroke-width="1.4"
+                    fill="none"
+                  />
+                </marker>
+              </defs>
+              <path
+                class="route-outbound"
+                pathLength="1"
+                d="M 136 232 C 106 74 255 69 366 118"
+                stroke="#3980ed"
+                stroke-width="2"
+                marker-end="url(#route-arrow)"
+              />
+              <path
+                class="route-inbound"
+                d="M 482 245 C 581 416 325 507 187 410"
+                stroke="#3980ed"
+                stroke-width="2"
+                stroke-dasharray="5 7"
+                marker-end="url(#route-arrow)"
+              />
+              <circle cx="132" cy="187" r="5" fill="#3980ed" />
+              <circle cx="449" cy="415" r="5" fill="#3980ed" />
+            </svg>
+            <span class="route-label route-open">더블 클릭 한 번이면</span>
+            <div class="local-document">
+              <span class="document-location"
+                ><span class="small-dot"></span>MAC에서</span><img
+                src="../assets/word.png"
+                alt=""
+                width="126"
+                height="126"
+              /><strong>프로젝트 개요.docx</strong><span class="document-caption">원래 있던 그 자리에.</span>
+            </div>
+            <div class="editor-document">
+              <div class="editor-top">
+                <span class="editor-dots"><i></i><i></i><i></i></span><span>GOOGLE DOCS</span>
+              </div>
+              <div class="editor-body">
+                <span class="editor-title">아이디어를 펼칠 공간.</span>
+                <div class="writing-line long"></div>
+                <div class="writing-line"></div>
+                <div class="writing-line short"></div>
+                <div class="editor-highlight"></div>
+                <div class="writing-line long"></div>
+              </div>
+            </div>
+            <div class="naro-connector">
+              <img src="../assets/naro.png" alt="" width="76" height="76" /><span
+                >Naro</span>
+            </div>
+            <span class="route-label route-return"
+              ><span class="return-check">✓</span>변경 사항을 Mac에 저장.</span>
+            <span class="illustration-label">MAC에서 GOOGLE로, 다시 MAC으로</span>
+          </div>
+          <figcaption>하나의 파일, 두 곳에서 매끄럽게.</figcaption>
+        </figure>
+      </section>
+      <div class="compatibility wrap">
+        <p>알고 있는 파일과 함께 작동합니다.</p>
+        <div>
+          <a href="#formats"><span class="format-dot word-dot"></span>Word</a><a href="#formats"><span class="format-dot excel-dot"></span>Excel</a><a href="#formats"
+            ><span class="format-dot slides-dot"></span>PowerPoint</a>
+        </div>
+        <span class="platform">macOS 26+ · Apple Silicon</span>
+      </div>
+      <section class="product-section wrap" aria-labelledby="product-title">
+        <div class="product-copy">
+          <p class="kicker">앱은 간결하게, 작업은 매끄럽게.</p>
+          <h2 id="product-title">작업에 필요한<br />기능만 담았습니다.</h2>
+          <p>
+            최근 파일입니다. 귀하의 Google 계정. 중단한 곳에서 다시 시작할 수 있는 친숙한 장소입니다.
+          </p>
+          <a class="text-link" href="#inside-naro"
+            >자세히 살펴보기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="product-figure">
+          <img
+            src="../assets/naro-window-ko.png"
+            alt="세 개의 샘플 Office 파일을 보여주는 실제 Naro 최근 문서 창."
+            width="1120"
+            height="600"
+            loading="lazy"
+          />
+          <figcaption>
+            샘플 파일이 포함된 Naro. 인터페이스가 선택한 언어와 일치합니다.
+          </figcaption>
+        </figure>
+      </section>
+      <section id="how-it-works" class="section first wrap">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">익숙한 시작</p>
+            <h2>Mac의 파일에서 시작하세요.</h2>
+          </div>
+          <p>
+            평소처럼 두 번 클릭하고 반대편에는 Google 편집자가 있습니다.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Google 계정을 연결하세요.</h3>
+            <p>
+              브라우저를 통해 로그인한 다음 계정 설정에서 Naro를 Office 파일용 기본 앱으로 설정하세요.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Finder에서 더블클릭하세요.</h3>
+            <p>
+              Naro는 파일을 구글 드라이브에 업로드하고 일치하는 편집기를 엽니다. 계정이 여러 개인 경우 먼저 아바타를 선택하세요.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>수정합니다. Mac이 최신 상태를 유지합니다.</h3>
+            <p>
+              Naro가 실행 중이고 온라인 상태인 동안 Google이 저장한 변경 사항을 확인하고 로컬에 다시 기록하여 백업을 유지합니다.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        id="formats"
+        class="section wrap"
+        aria-labelledby="formats-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="kicker">편집자 3명. 하나의 앱.</p>
+            <h2 id="formats-title">이미 사용하고 있는 파일의 경우.</h2>
+          </div>
+          <p>
+            문서, 스프레드시트, 프리젠테이션. 파일당 최대 100MB입니다.
+          </p>
+        </div>
+        <div class="formats">
+          <article class="format">
+            <img
+              src="../assets/word.png"
+              alt=""
+              width="76"
+              height="76"
+              loading="lazy"
+            />
+            <h3>Word → Docs</h3>
+            <p>로컬 문서에서 Google 문서도구로.</p>
+            <small>DOC · DOCX</small>
+          </article>
+          <article class="format">
+            <img
+              src="../assets/excel.png"
+              alt=""
+              width="76"
+              height="76"
+              loading="lazy"
+            />
+            <h3>Excel → Sheets</h3>
+            <p>Google 스프레드시트에서 스프레드시트를 엽니다.</p>
+            <small>XLS · XLSX</small>
+          </article>
+          <article class="format">
+            <img
+              src="../assets/powerpoint.png"
+              alt=""
+              width="76"
+              height="76"
+              loading="lazy"
+            />
+            <h3>PowerPoint → Slides</h3>
+            <p>프레젠테이션을 Google 프레젠테이션으로 가져가세요.</p>
+            <small>PPT · PPTX</small>
+          </article>
+        </div>
+      </section>
+      <section
+        id="inside-naro"
+        class="section wrap quiet-grid"
+        aria-labelledby="quiet-title"
+      >
+        <div>
+          <p class="kicker">Google 액세스, 설명</p>
+          <h2 id="quiet-title">귀하의 Google 계정입니다.<br />내 파일.</h2>
+          <a class="privacy-link" href="privacy.html"
+            >Naro가 데이터를 처리하는 방법을 읽어보세요.
+            <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="principles">
+          <div>
+            <h3>Naro가 구글 로그인을 사용하는 이유.</h3>
+            <p>
+              문서에 사용하려는 Google 계정을 연결하세요. Naro는 귀하의 이름, 이메일, 프로필 사진을 사용하여 연결된 계정을 표시하고 올바른 계정을 선택하도록 도와줍니다. Naro는 귀하의 Google 비밀번호를 절대 받지 않습니다.
+            </p>
+          </div>
+          <div>
+            <h3>Naro에게 구글 드라이브 접근이 필요한 이유.</h3>
+            <p>
+              Naro로 로컬 Office 파일을 열면 해당 파일이 Google 드라이브에 업로드되고 브라우저에서 Google 편집기가 열립니다. 드라이브 액세스를 통해 Naro는 저장된 변경 사항을 검색하고 Mac에 다시 동기화할 수 있습니다. 액세스는 전체 드라이브가 아닌 Naro에서 생성되었거나 명시적으로 공유된 파일로 제한됩니다.
+            </p>
+          </div>
+          <div>
+            <h3>파일은 Google 드라이브로 이동됩니다.</h3>
+            <p>
+              문서는 Mac과 Google 간에 직접 이동합니다. Naro에는 귀하의 문서를 수신하는 개발자 운영 서버가 없습니다. 로그인 토큰은 macOS 키체인에 유지됩니다.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="guides"
+        class="section wrap guides-section"
+        aria-labelledby="guides-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="kicker">필요할 때 도움을</p>
+            <h2 id="guides-title">Naro를 편하게 사용하세요.</h2>
+          </div>
+          <p>
+            첫 번째 파일에 대한 간단한 가이드,<br />다음 계정으로 모든 것이 동기화됩니다.
+          </p>
+        </div>
+        <div class="guide-cards">
+          <article>
+            <a class="guide-card" href="guides.html#get-started"
+              ><p class="guide-category"><span></span>시작하기</p>
+              <div class="guide-art guide-art-start" aria-hidden="true">
+                <span class="poster-word">안녕하세요.<br />Naro.</span><img
+                  src="../assets/naro.png"
+                  alt=""
+                  width="140"
+                  height="140"
+                  loading="lazy"
+                />
+                <div class="poster-formats"><i></i><i></i><i></i></div>
+                <span class="poster-note">익숙한 첫걸음</span>
+              </div>
+              <h3>첫 파일 열기부터 저장까지.</h3>
+              <p class="guide-description">
+                Google을 연결하고 Finder에서 열기를 설정한 다음 첫 번째 문서를 브라우저로 가져오세요.
+              </p>
+              <span class="guide-meta"
+                >첫걸음 <span aria-hidden="true">/</span> 가이드 읽기
+                <span aria-hidden="true">↗</span></span></a>
+          </article>
+          <article>
+            <a class="guide-card" href="guides.html#accounts"
+              ><p class="guide-category"><span></span>Google 계정</p>
+              <div class="guide-art guide-art-accounts" aria-hidden="true">
+                <span class="poster-word">하나의 Mac.<br />귀하의 계정.</span>
+                <div class="poster-accounts">
+                  <span class="poster-avatar avatar-work">W</span><span class="account-path">↔</span><span class="poster-avatar avatar-personal">P</span>
+                </div>
+                <span class="poster-note">업무용, 개인용, 원하는 계정으로.</span>
+              </div>
+              <h3>파일마다 알맞은 계정을 선택하세요.</h3>
+              <p class="guide-description">
+                다른 계정을 추가하고 Naro의 컴팩트 아바타 선택기를 사용하여 각 문서가 이동할 위치를 선택하세요.
+              </p>
+              <span class="guide-meta"
+                >계정 <span aria-hidden="true">/</span> 가이드 읽기
+                <span aria-hidden="true">↗</span></span></a>
+          </article>
+          <article>
+            <a class="guide-card" href="guides.html#sync"
+              ><p class="guide-category"><span></span>저장 및 동기화</p>
+              <div class="guide-art guide-art-sync" aria-hidden="true">
+                <span class="poster-word"
+                  >Google에서 편집하고,<br />Mac에 저장하세요.</span>
+                <div class="poster-route">
+                  <span>Mac</span><span class="route-both">⇄</span><span>Google</span>
+                </div>
+                <span class="poster-note">변경 사항이 MAC으로 돌아옵니다.</span>
+              </div>
+              <h3>변경 사항을 Mac으로 가져오세요.</h3>
+              <p class="guide-description">
+                로컬 저장, 백업, 파일이 두 곳에서 변경될 때 취해야 할 조치를 이해합니다.
+              </p>
+              <span class="guide-meta"
+                >일상용 <span aria-hidden="true">/</span> 가이드 읽기
+                <span aria-hidden="true">↗</span></span></a>
+          </article>
+        </div>
+        <div class="guides-footer">
+          <a class="primary-link" href="guides.html">모든 가이드 보기</a>
+        </div>
+      </section>
+      <section class="section wrap" aria-labelledby="questions-title">
+        <p class="kicker">알아두면 좋아요</p>
+        <h2 id="questions-title">몇 가지 유용한 정보.</h2>
+        <div class="faq">
+          <details>
+            <summary>Naro를 지금 다운로드할 수 있나요?</summary>
+            <p>
+              네. <a href="https://github.com/plexideas/naro/releases/latest"
+                >GitHub 릴리스에서 Naro 다운로드</a>또는 Homebrew로 설치:
+              <code>brew install --cask plexideas/tap/naro</code>. 다운로드에는 Apple 개발자 ID 서명이 없으므로 macOS에서는 최초 실행을 명시적으로 허용해야 할 수도 있습니다.
+            </p>
+          </details>
+          <details>
+            <summary>앱 내에서 파일을 편집하나요?</summary>
+            <p>
+              편집은 브라우저의 Google Docs, Sheets, Slides에서 이루어집니다. Naro는 Finder에서 파일 열기, 계정 선택, Google이 저장한 변경 사항을 Mac으로 다시 가져오는 작업을 처리합니다.
+            </p>
+          </details>
+          <details>
+            <summary>두 사본이 모두 변경되면 어떻게 되나요?</summary>
+            <p>
+              Naro는 두 버전을 모두 유지하고 어느 버전을 계속할지 묻습니다. 또한 문서를 교체하기 전에 로컬 백업을 만듭니다. 동기화를 위해 Naro를 계속 실행하고 인터넷에 연결하세요.
+            </p>
+          </details>
+          <details>
+            <summary>모든 Office 기능이 똑같이 보일까요?</summary>
+            <p>
+              호환성은 Google Office 편집기에 따라 다릅니다. 복잡한 서식, 매크로 및 기타 고급 기능은 유지되지 않을 수 있습니다. Google이 이전 DOC, XLS 또는 PPT 파일을 업그레이드하는 경우 Naro는 원본과 함께 최신 형식의 사본을 저장합니다. 파일을 별도의 Google 네이티브 문서로 변환하는 것은 원본 파일 링크로 추적되지 않습니다.
+            </p>
+          </details>
+          <details>
+            <summary>어떤 Mac이 지원되나요?</summary>
+            <p>
+              Naro는 macOS 26 이상을 실행하는 Apple Silicon Mac을 지원합니다. 앱은 GitHub 릴리스에서 업데이트를 확인할 수 있습니다. 업데이트 창에서 다운로드, 설치 및 다시 시작 시기를 선택합니다.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-main">
+          <a class="brand" href="./"
+            ><img src="../assets/naro.png" alt="" width="28" height="28" />Naro</a>
+          <nav aria-label="바닥글 탐색">
+            <a href="privacy.html">개인정보 보호</a><a href="terms.html">이용약관</a><a href="https://github.com/plexideas/naro-site/issues"
+              >지원 ↗</a>
+          </nav>
+        </div>
+        <p class="fineprint">
+          독립 앱
+          <a href="https://github.com/plexideas">Sergei Sakharovskii</a>. Google, Microsoft 또는 Apple과 제휴하지 않습니다. 제품 이름은 해당 소유자의 소유입니다.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

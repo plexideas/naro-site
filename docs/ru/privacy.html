@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Конфиденциальность — Naro</title>
+    <meta
+      name="description"
+      content="Как Naro получает доступ к учетным записям Google, синхронизирует документы и сохраняет данные на вашем Mac."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Конфиденциальность — Naro" />
+    <meta
+      property="og:description"
+      content="Как Naro получает доступ к учетным записям Google, синхронизирует документы и сохраняет данные на вашем Mac."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://naro.tools/ru/privacy" />
+    <meta property="og:image" content="https://naro.tools/assets/naro.png" />
+    <link rel="canonical" href="https://naro.tools/ru/privacy" />
+    <link rel="icon" href="../assets/naro.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../motion.css" />
+  <link rel="alternate" hreflang="en" href="https://naro.tools/privacy" />
+<link rel="alternate" hreflang="ru" href="https://naro.tools/ru/privacy" />
+<link rel="alternate" hreflang="zh-Hans" href="https://naro.tools/zh/privacy" />
+<link rel="alternate" hreflang="ko" href="https://naro.tools/ko/privacy" />
+<link rel="alternate" hreflang="ja" href="https://naro.tools/ja/privacy" />
+<link rel="alternate" hreflang="es" href="https://naro.tools/es/privacy" />
+<link rel="alternate" hreflang="de" href="https://naro.tools/de/privacy" />
+<link rel="alternate" hreflang="it" href="https://naro.tools/it/privacy" />
+<link rel="alternate" hreflang="fr" href="https://naro.tools/fr/privacy" />
+<link rel="alternate" hreflang="x-default" href="https://naro.tools/privacy" />
+</head>
+  <body>
+    <a class="skip" href="#main">Перейти к содержимому</a>
+    <header class="wrap nav">
+      <a class="brand" href="./" aria-label="Дом Naro"
+        ><img src="../assets/naro.png" alt="" width="38" height="38" /><span
+          >Naro</span><span class="brand-detail">для Mac</span></a>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="./#how-it-works">Как это работает</a><a class="optional" href="./#formats">Форматы файлов</a><a href="guides.html">Руководства</a><a href="privacy.html">Конфиденциальность</a>
+      </nav>
+      <a class="repo-link" href="https://github.com/plexideas/naro-site"
+        >GitHub <span aria-hidden="true">↗</span></a>
+    <details class="languages"><summary aria-label="Выбрать язык"><span aria-hidden="true">◎</span> Русский</summary><nav aria-label="Язык"><a href="../privacy.html" lang="en" hreflang="en">English</a><a href="privacy.html" lang="ru" hreflang="ru" aria-current="true">Русский</a><a href="../zh/privacy.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ko/privacy.html" lang="ko" hreflang="ko">한국어</a><a href="../ja/privacy.html" lang="ja" hreflang="ja">日本語</a><a href="../es/privacy.html" lang="es" hreflang="es">Español</a><a href="../de/privacy.html" lang="de" hreflang="de">Deutsch</a><a href="../it/privacy.html" lang="it" hreflang="it">Italiano</a><a href="../fr/privacy.html" lang="fr" hreflang="fr">Français</a></nav></details></header>
+    <main id="main" class="wrap prose">
+      <p class="kicker">Объяснение ваших данных</p>
+      <h1>Политика конфиденциальности</h1>
+      <p class="meta">
+        Последнее обновление: 23 сентября 2026 г.
+      </p>
+      <p class="intro">
+        Naro соединяет файлы Office на вашем Mac с редакторами Google. На этой странице объясняется, к чему имеет доступ приложение, куда оно переходит и как его удалить.
+      </p>
+      <h2>Кто предоставляет Naro</h2>
+      <p>
+        Naro — независимое приложение, разработанное Сергеем Сахаровским (<a
+          href="https://github.com/plexideas"
+          >@plexideas</a>). Эта политика распространяется на приложение Naro macOS и этот информационный веб-сайт.
+      </p>
+      <h2>Информация об аккаунте Google</h2>
+      <p>
+        Когда вы входите в систему, Naro запрашивает идентификатор вашей учетной записи Google, адрес электронной почты, имя и изображение профиля, чтобы отобразить подключенные учетные записи и позволить вам выбрать правильную. Авторизация происходит в вашем браузере; Naro не получает ваш пароль Google.
+      </p>
+      <p>
+        Запросы Naro <code>openid</code>, <code>email</code>,
+        <code>profile</code>и
+        <code>https://www.googleapis.com/auth/drive.file</code>. Разрешение Диска позволяет получить доступ к файлам, созданным Naro или явно предоставленным ему доступом. Naro не запрашивает разрешение на чтение всего вашего Google Диска.
+      </p>
+      <h2>Документы и синхронизация</h2>
+      <p>
+        Когда вы открываете файл с помощью Naro и выбираете учетную запись, приложение загружает этот файл и его имя прямо на ваш Google Диск. В браузере открывается соответствующий редактор Google. Пока Naro работает и находится в сети, он проверяет связанные файлы на наличие изменений и загружает сохраненные обновления на ваш Mac.
+      </p>
+      <p>
+        Google получает содержимое документов и запросы, связанные с учетной записью, необходимые для предоставления этих услуг. Google обрабатывает эти данные в соответствии со своими собственными
+        <a href="https://policies.google.com/privacy">политика конфиденциальности</a> и настройки вашей учетной записи. Naro не отправляет документы на серверную часть, управляемую разработчиком.
+      </p>
+      <h2>Информация, хранящаяся на вашем Mac.</h2>
+      <ul>
+        <li>
+          Токены входа и данные подключенной учетной записи хранятся в связке ключей macOS.
+        </li>
+        <li>
+          Пути к локальным документам и закладки, идентификаторы файлов Google, ассоциации учетных записей, метаданные синхронизации и история открытия хранятся в папке <code>~/Library/Application Support/Naro/</code>.
+        </li>
+        <li>
+          Прежде чем перезаписывать локальный документ, Naro сохраняет резервную копию. Противоречивые версии сохранились. Резервные копии не удаляются автоматически.
+        </li>
+        <li>
+          Фотографии профиля взяты из Google. macOS может кэшировать ответы изображений локально.
+        </li>
+      </ul>
+      <h2>Как используется информация</h2>
+      <p>
+        Naro использует данные учетной записи Google и документов для обеспечения входа в систему, выбора учетной записи, открытия файлов, синхронизации, истории последних документов и резервных копий. Текущее приложение не содержит рекламных, аналитических SDK или служб телеметрии, управляемых разработчиками. Naro не продает эти данные и не использует содержимое документов для обучения моделей ИИ.
+      </p>
+      <p>
+        Использование и передача Naro в любое другое приложение информации, полученной от API Google, соответствует
+        <a
+          href="https://developers.google.com/terms/api-services-user-data-policy"
+          >Политика использования данных пользователей служб API Google</a>, включая требования к ограниченному использованию.
+      </p>
+      <h2>Отключение и удаление данных</h2>
+      <p>
+        Удаление учетной записи в Naro удаляет локально сохраненную авторизацию и останавливает синхронизацию этой учетной записи. Он не удаляет ваши локальные документы, резервные копии, историю открытий или файлы на Google Диске.
+      </p>
+      <p>
+        Чтобы отозвать авторизацию Google, удалите Naro из
+        <a href="https://myaccount.google.com/connections"
+          >сторонние подключения вашего аккаунта Google</a>. Чтобы удалить локальную историю и резервные копии, закройте Naro и удалите папку «Поддержка приложений» после сохранения всех необходимых резервных копий. Удаление только этой папки не приводит к удалению токенов входа из связки ключей; сначала отключите аккаунты в Naro. Удалите загруженные файлы отдельно на Google Диске, если вы больше не хотите их хранить. Данные местной поддержки сохраняются до тех пор, пока вы их не удалите.
+      </p>
+      <h2>Обновления приложения</h2>
+      <p>
+        Naro по умолчанию проверяет выпуски GitHub на наличие новых версий. Вы можете отключить автоматические проверки в приложении. При проверке обновлений или загрузке выпуска информация о техническом подключении, например ваш IP-адрес, отправляется на GitHub. Эти запросы не включают ваши токены или документы Google. Установка и перезагрузка происходят только тогда, когда вы решите обновить.
+      </p>
+      <h2>Этот сайт</h2>
+      <p>
+        Этот веб-сайт размещен на Netlify и предоставляется через Cloudflare. Код сайта не добавляет аналитику, рекламу, скрипты отслеживания или файлы cookie. Поставщики хостинга и доставки могут обрабатывать техническую информацию доступа, включая IP-адреса, для работы и защиты веб-сайта, как описано в
+        <a href="https://www.cloudflare.com/privacypolicy/">Политика конфиденциальности Cloudflare</a>
+        и
+        <a href="https://www.netlify.com/privacy/">Политика конфиденциальности Netlify</a>. Ссылки на репозиторий и поддержку открывают GitHub, обработка этого действия которого описана в
+        <a
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+          >Заявление о конфиденциальности GitHub</a>. Открытие других внешних ссылок приведет вас к сервису соответствующего провайдера.
+      </p>
+      <h2>Вопросы и изменения</h2>
+      <p>
+        По общим вопросам конфиденциальности обращайтесь к сопровождающему через
+        <a href="https://github.com/plexideas/naro-site/issues"
+          >хранилище Naro</a>. Проблемы являются общедоступными: не публикуйте документы, пароли, токены или данные личной учетной записи. Эта политика будет обновляться при изменении обработки данных в приложении; указанная выше дата указывает на последнюю версию.
+      </p>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-main">
+          <a class="brand" href="./"
+            ><img src="../assets/naro.png" alt="" width="28" height="28" />Naro</a>
+          <nav aria-label="Навигация в нижнем колонтитуле">
+            <a href="privacy.html">Конфиденциальность</a><a href="terms.html">Условия</a><a href="https://github.com/plexideas/naro-site/issues"
+              >Поддержка ↗</a>
+          </nav>
+        </div>
+        <p class="fineprint">
+          Независимое приложение от
+          <a href="https://github.com/plexideas">Sergei Sakharovskii</a>. Не связан с Google, Microsoft или Apple. Названия продуктов принадлежат их владельцам.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

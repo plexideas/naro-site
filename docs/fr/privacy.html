@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Confidentialité — Naro</title>
+    <meta
+      name="description"
+      content="Comment Naro accède aux comptes Google, synchronise les documents et stocke les données sur votre Mac."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Confidentialité — Naro" />
+    <meta
+      property="og:description"
+      content="Comment Naro accède aux comptes Google, synchronise les documents et stocke les données sur votre Mac."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://naro.tools/fr/privacy" />
+    <meta property="og:image" content="https://naro.tools/assets/naro.png" />
+    <link rel="canonical" href="https://naro.tools/fr/privacy" />
+    <link rel="icon" href="../assets/naro.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../motion.css" />
+  <link rel="alternate" hreflang="en" href="https://naro.tools/privacy" />
+<link rel="alternate" hreflang="ru" href="https://naro.tools/ru/privacy" />
+<link rel="alternate" hreflang="zh-Hans" href="https://naro.tools/zh/privacy" />
+<link rel="alternate" hreflang="ko" href="https://naro.tools/ko/privacy" />
+<link rel="alternate" hreflang="ja" href="https://naro.tools/ja/privacy" />
+<link rel="alternate" hreflang="es" href="https://naro.tools/es/privacy" />
+<link rel="alternate" hreflang="de" href="https://naro.tools/de/privacy" />
+<link rel="alternate" hreflang="it" href="https://naro.tools/it/privacy" />
+<link rel="alternate" hreflang="fr" href="https://naro.tools/fr/privacy" />
+<link rel="alternate" hreflang="x-default" href="https://naro.tools/privacy" />
+</head>
+  <body>
+    <a class="skip" href="#main">Passer au contenu</a>
+    <header class="wrap nav">
+      <a class="brand" href="./" aria-label="Accueil Naro"
+        ><img src="../assets/naro.png" alt="" width="38" height="38" /><span
+          >Naro</span><span class="brand-detail">pour Mac</span></a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="./#how-it-works">Comment ça marche</a><a class="optional" href="./#formats">Formats de fichiers</a><a href="guides.html">Guides</a><a href="privacy.html">Confidentialité</a>
+      </nav>
+      <a class="repo-link" href="https://github.com/plexideas/naro-site"
+        >GitHub <span aria-hidden="true">↗</span></a>
+    <details class="languages"><summary aria-label="Choisir la langue"><span aria-hidden="true">◎</span> Français</summary><nav aria-label="Langue"><a href="../privacy.html" lang="en" hreflang="en">English</a><a href="../ru/privacy.html" lang="ru" hreflang="ru">Русский</a><a href="../zh/privacy.html" lang="zh-Hans" hreflang="zh-Hans">简体中文</a><a href="../ko/privacy.html" lang="ko" hreflang="ko">한국어</a><a href="../ja/privacy.html" lang="ja" hreflang="ja">日本語</a><a href="../es/privacy.html" lang="es" hreflang="es">Español</a><a href="../de/privacy.html" lang="de" hreflang="de">Deutsch</a><a href="../it/privacy.html" lang="it" hreflang="it">Italiano</a><a href="privacy.html" lang="fr" hreflang="fr" aria-current="true">Français</a></nav></details></header>
+    <main id="main" class="wrap prose">
+      <p class="kicker">Vos données, expliquées</p>
+      <h1>Politique de confidentialité</h1>
+      <p class="meta">
+        Dernière mise à jour le 23 septembre 2026
+      </p>
+      <p class="intro">
+        Naro connecte les fichiers Office de votre Mac aux éditeurs de Google. Cette page explique à quoi accède l'application, où elle va et comment vous pouvez la supprimer.
+      </p>
+      <h2>Qui fournit Naro</h2>
+      <p>
+        Naro est une application indépendante développée par Sergei Sakharovskii (<a
+          href="https://github.com/plexideas"
+          >@plexideas</a>). Cette politique couvre l'application Naro macOS et ce site Web d'information.
+      </p>
+      <h2>Informations sur le compte Google</h2>
+      <p>
+        Lorsque vous vous connectez, Naro demande votre identifiant de compte Google, votre adresse e-mail, votre nom et votre photo de profil pour afficher vos comptes connectés et vous permettre de choisir le bon. L'autorisation s'effectue dans votre navigateur ; Naro ne reçoit pas votre mot de passe Google.
+      </p>
+      <p>
+        Demandes Naro <code>openid</code>, <code>email</code>,
+        <code>profile</code>, et
+        <code>https://www.googleapis.com/auth/drive.file</code>. L'autorisation Drive permet d'accéder aux fichiers créés par Naro ou explicitement mis à sa disposition. Naro ne demande pas l'autorisation de lire l'intégralité de votre Google Drive.
+      </p>
+      <h2>Documents et synchronisation</h2>
+      <p>
+        Lorsque vous ouvrez un fichier avec Naro et sélectionnez un compte, l'application télécharge ce fichier et son nom de fichier directement sur votre Google Drive. Le navigateur ouvre l’éditeur correspondant de Google. Pendant que Naro est en cours d'exécution et en ligne, il vérifie les modifications apportées aux fichiers liés et télécharge les mises à jour enregistrées sur votre Mac.
+      </p>
+      <p>
+        Google reçoit le contenu des documents et les demandes liées au compte nécessaires à la fourniture de ces services. Google traite ces données selon ses propres règles
+        <a href="https://policies.google.com/privacy">politique de confidentialité</a> et les paramètres de votre compte. Naro n'envoie pas de documents à un backend géré par un développeur.
+      </p>
+      <h2>Informations stockées sur votre Mac</h2>
+      <ul>
+        <li>
+          Les jetons de connexion et les détails du compte connecté sont stockés dans le trousseau macOS.
+        </li>
+        <li>
+          Les chemins et favoris des documents locaux, les identifiants de fichiers Google, les associations de comptes, les métadonnées de synchronisation et l'historique d'ouverture sont stockés sous <code>~/Library/Application Support/Naro/</code>.
+        </li>
+        <li>
+          Avant d'écraser un document local, Naro conserve une sauvegarde. Les versions contradictoires sont conservées. Les sauvegardes ne sont pas automatiquement supprimées.
+        </li>
+        <li>
+          Les photos de profil sont récupérées sur Google. macOS peut mettre en cache les réponses d'image localement.
+        </li>
+      </ul>
+      <h2>Comment les informations sont utilisées</h2>
+      <p>
+        Naro uses Google account and document data to provide sign-in, account selection, file opening, synchronization, recent-document history, and recovery copies. L'application actuelle ne contient aucun SDK de publicité, d'analyse ou de service de télémétrie exploité par le développeur. Naro ne vend pas ces données et n'utilise pas le contenu du document pour former des modèles d'IA.
+      </p>
+      <p>
+        L'utilisation par Naro et le transfert vers toute autre application des informations reçues des API Google adhèrent aux
+        <a
+          href="https://developers.google.com/terms/api-services-user-data-policy"
+          >Politique relative aux données utilisateur des services API Google</a>, y compris ses exigences d'utilisation limitée.
+      </p>
+      <h2>Déconnexion et suppression de données</h2>
+      <p>
+        La suppression d'un compte dans Naro supprime son autorisation enregistrée localement et arrête la synchronisation pour ce compte. Il ne supprime pas vos documents locaux, vos sauvegardes, votre historique d'ouverture ou vos fichiers dans Google Drive.
+      </p>
+      <p>
+        Pour révoquer l'autorisation de Google, supprimez Naro de
+        <a href="https://myaccount.google.com/connections"
+          >les connexions tierces de votre compte Google</a>. Pour supprimer l'historique local et les sauvegardes, quittez Naro et supprimez son dossier Application Support après avoir enregistré toutes les sauvegardes dont vous avez besoin. La suppression de ce dossier à elle seule ne supprime pas les jetons de connexion du trousseau ; déconnectez d'abord les comptes à Naro. Supprimez les fichiers téléchargés séparément dans Google Drive si vous ne souhaitez plus les conserver. Les données d'assistance locale restent jusqu'à ce que vous les supprimiez.
+      </p>
+      <h2>Mises à jour des applications</h2>
+      <p>
+        Naro vérifie par défaut les nouvelles versions de GitHub. Vous pouvez désactiver les contrôles automatiques dans l'application. La recherche de mises à jour ou le téléchargement d'une version envoie des informations de connexion techniques, telles que votre adresse IP, à GitHub. Ces demandes n'incluent pas vos jetons ou documents Google. Installation and restart happen only when you choose to update.
+      </p>
+      <h2>Ce site</h2>
+      <p>
+        Ce site Web est hébergé sur Netlify et fourni via Cloudflare. Le code du site Web n'ajoute pas d'analyses, de publicités, de scripts de suivi ou de cookies. The hosting and delivery providers may process technical access information, including IP addresses, to operate and secure the website, as described in the
+        <a href="https://www.cloudflare.com/privacypolicy/">Politique de confidentialité de Cloudflare</a>
+        et le
+        <a href="https://www.netlify.com/privacy/">Politique de confidentialité de Netlify</a>. Les liens vers le référentiel et le support ouvrent GitHub, dont la gestion de cette activité est décrite dans le
+        <a
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+          >Déclaration de confidentialité de GitHub</a>. L’ouverture d’autres liens externes vous amène au service du fournisseur correspondant.
+      </p>
+      <h2>Questions et changements</h2>
+      <p>
+        Pour des questions générales sur la confidentialité, contactez le responsable via
+        <a href="https://github.com/plexideas/naro-site/issues"
+          >le référentiel Naro</a>. Les problèmes sont publics : ne publiez pas de documents, de mots de passe, de jetons ou de détails de compte privé. Cette politique sera mise à jour lorsque la gestion des données de l'application changera ; la date ci-dessus identifie la dernière version.
+      </p>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-main">
+          <a class="brand" href="./"
+            ><img src="../assets/naro.png" alt="" width="28" height="28" />Naro</a>
+          <nav aria-label="Navigation en pied de page">
+            <a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="https://github.com/plexideas/naro-site/issues"
+              >Assistance ↗</a>
+          </nav>
+        </div>
+        <p class="fineprint">
+          Une application indépendante par
+          <a href="https://github.com/plexideas">Sergei Sakharovskii</a>. Non affilié à Google, Microsoft ou Apple. Les noms de produits appartiennent à leurs propriétaires respectifs.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
